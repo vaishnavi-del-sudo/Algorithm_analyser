@@ -1,0 +1,141 @@
+ALGOWIKI AI
+An Intelligent Algorithm Chatbot
+1. Introduction
+With the increasing demand for quick and reliable information, intelligent chatbot systems
+have become essential tools in education and learning. AlgoWiki AI is a lightweight, webbased chatbot designed to provide concise explanations of common search algorithms using
+Wikipedia as a knowledge source.
+The application leverages Python, Streamlit, and the Wikipedia API to create an interactive
+platform where users can ask questions about algorithms like BFS, DFS, A*, and more, and
+receive instant summaries.
+2. Objectives
+The main objectives of this project are:
+• To develop an interactive chatbot for algorithm-related queries
+• To integrate real-time knowledge retrieval using Wikipedia
+• To provide concise and accurate summaries of algorithms
+• To design a clean and user-friendly web interface
+• To demonstrate the use of APIs and UI frameworks in Python
+3. Scope of the Project
+This project focuses on:
+• Search algorithms such as:
+o Breadth-First Search (BFS)
+o Depth-First Search (DFS)
+o A* Search
+o AO* Algorithm
+o Hill Climbing
+o Best-First Search
+• Educational use for students and beginners
+• Web-based deployment using Streamlit
+Limitations:
+• Limited to predefined algorithms
+• Relies on Wikipedia summaries (not deep explanations)
+• Basic keyword-based query handling
+4. System Architecture
+The system consists of three main components:
+1. User Interface (UI)
+• Built using Streamlit
+• Accepts user queries
+• Displays chatbot responses and history
+2. Chatbot Logic Layer
+• Handles user input
+• Matches keywords with predefined algorithm mappings
+• Calls Wikipedia API
+3. Data Source
+• Wikipedia API provides real-time summaries
+5. Technologies Used
+Technology Purpose
+Python Core programming language
+Streamlit Web interface development
+wikipedia-api Fetching data from Wikipedia
+Technology Purpose
+HTML/CSS (inline) Styling UI components
+6. Methodology
+Step 1: User Input
+• User enters a query in the text box
+• Example: "What is BFS?"
+Step 2: Query Processing
+• Input is converted to lowercase
+• Keywords are matched against predefined aliases
+Step 3: Algorithm Mapping
+{
+ "bfs": "Breadth-first search",
+ "dfs": "Depth-first search",
+ ...
+}
+Step 4: Wikipedia Fetch
+• The mapped topic is searched using Wikipedia API
+• Summary is extracted (first 2 lines)
+Step 5: Response Display
+• Answer is shown in chat format
+• Stored in session history
+7. System Design
+Class: AlgorithmChatbot
+Methods:
+• __init__() → Initializes Wikipedia API and mapping
+• get_wiki_summary() → Fetches summary
+• handle_query() → Processes user input
+UI Design
+• Header section with app title
+• Input form for queries
+• Chat history display
+• Sidebar with tips and examples
+8. Features
+• Simple and interactive chat interface
+• Real-time Wikipedia data retrieval
+• Session-based chat history
+• Predefined algorithm recognition
+• Clean UI with styled responses
+9. Advantages
+• Easy to use and beginner-friendly
+• Lightweight and fast
+• No need for large ML models
+• Real-time information from Wikipedia
+• Easily extendable
+10. Limitations
+• Only supports limited algorithms
+• Basic keyword matching (no NLP)
+• Depends on internet connectivity
+• No deep explanation or examples
+• No voice or multilingual support
+11. Future Enhancements
+• Add more algorithms (Dijkstra, Greedy, Minimax)
+• Integrate NLP for better query understanding
+• Add voice input/output
+• Display diagrams or visualizations
+• Provide detailed explanations and examples
+• Deploy on cloud platforms
+• Add multi-language support
+12. Testing
+Test Cases:
+Input Expected Output
+What is BFS? Summary of BFS
+Explain DFS Summary of DFS
+A* algorithm Summary of A*
+Random question Default response
+13. Results
+• Successfully retrieves summaries from Wikipedia
+• Displays responses in a structured chat format
+• Maintains conversation history
+• Provides quick and accurate information
+
+14. Conclusion
+AlgoWiki AI is an efficient and user-friendly chatbot designed to assist users in understanding
+fundamental search algorithms. By integrating Wikipedia with a simple UI, the system
+provides instant knowledge access without requiring complex machine learning models.
+This project demonstrates how APIs and lightweight frameworks like Streamlit can be used
+to build practical educational tools.
+15. References
+• Wikipedia API Documentation
+• Streamlit Official Documentation
+• Python Documentation
+16. Appendix
+Sample Code Snippet
+def handle_query(self, user_input):
+ user_input = user_input.lower()
+ for key, wiki_title in self.algo_map.items():
+ if key in user_input:
+ return self.get_wiki_summary(wiki_title)
+⭐ Final Note
+This project is ideal for:
+• Students learning Python and APIs
+• Beginners exploring chatbot development
+• Academic mini-project submissions
