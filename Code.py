@@ -124,9 +124,9 @@ st.markdown("""
 # Main Dashboard Header
 st.markdown("""
     <div class="main-header">
-        <h1 style='margin:0; font-family:sans-serif;'>🧠 Search Algorithm Matrix Benchmarker</h1>
+        <h1 style='margin:0; font-family:sans-serif;'>🧠 Search Algorithm Analyzer</h1>
         <p style='margin:10px 0 0; opacity:0.9; font-size:1.1rem;'>
-            Design custom network topologies, assign weights, and visualize how classic AI search strategies navigate your graph.
+            Design custom network search trees, assign weights, and visualize how classic AI search strategies navigate your graph.
         </p>
     </div>
 """, unsafe_allow_html=True)
